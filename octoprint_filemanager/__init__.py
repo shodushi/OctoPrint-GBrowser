@@ -315,7 +315,6 @@ class FilemanagerPlugin(octoprint.plugin.TemplatePlugin,
 			files = {
 				FileDestinations.SDCARD: {
 					"name": sdFilename,
-					"thumb": sdFilename.replace(".gcode", ".png"),
 					"origin": FileDestinations.SDCARD,
 					"refs": {
 						"resource": location
