@@ -146,8 +146,12 @@ $(function() {
             return "filemanager_template_" + data.type;
         };
 
+        self.thumbnail = function(data) {
+            return data.replace(".gcode", ".png");
+        }
+
         self.getEntryId = function(data) {
-            self.thumb = data["name"].replace(".gcode", ".png")
+            self.thumb = data["name"].replace(".gcode", ".png");
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
         };
 
