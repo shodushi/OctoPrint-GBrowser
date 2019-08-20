@@ -115,7 +115,8 @@
 </script>
 
 <script type="text/html" id="filemanager_template_folder">
-    <div class="span6 title" data-bind=""><i class="icon-folder-open"></i><span><!-- ko text: name --><!-- /ko --><a href="#" style="float: right; padding-right: 20px;" class="hidden-desktop" data-bind="click: $root.dblClick">{{  _('Open') }}</a></span><img src="" style="border: 1px solid blue; width:20px; heighth:20px;"></div>
+    <div class="span4 title""></div>
+    <div class="span2 title" data-bind=""><i class="icon-folder-open"></i><span><!-- ko text: name --><!-- /ko --><a href="#" style="float: right; padding-right: 20px;" class="hidden-desktop" data-bind="click: $root.dblClick">{{  _('Open') }}</a></span><img src="" style="border: 1px solid blue; width:20px; heighth:20px;"></div>
     <div class="span4 uploaded" data-bind="text: formatTimeAgo(date)"></div>
     <div class="span2 size" data-bind="text: formatSize(size)"></div>
 </script>
