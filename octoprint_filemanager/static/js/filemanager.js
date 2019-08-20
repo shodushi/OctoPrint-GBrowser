@@ -147,7 +147,7 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-            return data.replace(".gcode", ".png");
+            return data["name"].replace(".gcode", ".png");
         }
 
         self.getEntryId = function(data) {
