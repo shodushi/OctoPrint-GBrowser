@@ -150,6 +150,10 @@ $(function() {
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
         }
 
+        self.getVar = function(data) {
+            return self.thumb;
+        }
+
         self.getEntryId = function(data) {
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
         };
