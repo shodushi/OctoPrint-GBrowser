@@ -142,7 +142,7 @@ $(function() {
         };
 
         self.templateFor = function(data) {
-            return "filemanager_template_" + data.type;
+            return "filemanager_template_" + data["name"].replace(".gcode", ".png");
         };
 
         self.thumbnaildata = function(data) {
