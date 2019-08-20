@@ -142,15 +142,11 @@ $(function() {
         };
 
         self.templateFor = function(data) {
-            return "filemanager_template_" + data["name"].replace(".gcode", ".png");
+            return "filemanager_template_" + data.type;
         };
 
-        self.thumbnaildata = function(data) {
-            return "filemanager_entry_" + data["name"].replace(".gcode", ".png");
-        }
-
         self.getEntryId = function(data) {
-            return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
+            return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"].replace(".gcode", ".png"));
         };
 
         self.checkSelectedOrigin = function(origin) {
