@@ -397,6 +397,7 @@ $(function() {
             self.addFolderDialog = $("#add_folder_dialog");
         };
 
+/*
         self.function zoomIn(event) {
             var element = document.getElementById("overlay_d.gcode");
             element.style.display = "inline-block";
@@ -410,6 +411,7 @@ $(function() {
             var element = document.getElementById("overlay_d.gcode");
             element.style.display = "none";
         }
+*/
     }
 
     OCTOPRINT_VIEWMODELS.push([
