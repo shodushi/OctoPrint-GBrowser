@@ -151,7 +151,8 @@ $(function() {
         }
 
         self.getEntryId = function(data) {
-            self.thumb = data["name"].replace(".gcode", ".png");
+            //self.thumb = data["name"].replace(".gcode", ".png");
+            console.log(data["name"].replace(".gcode", ".png"));
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
         };
 
