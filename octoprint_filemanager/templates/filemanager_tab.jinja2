@@ -63,7 +63,8 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12 header">
-            <div class="span6">{{ _('Name') }}</div>
+            <div class="span4">Image</div>
+            <div class="span2">{{ _('Name') }}</div>
             <div class="span4">{{ _('Created') }}</div>
             <div class="span2">{{ _('Size') }}</div>
         </div>
@@ -75,23 +76,23 @@
 
                 <!-- ko if: listStyle() == 'folders_files' -->
                 <!-- ko slimScrolledForeach: foldersOnlyList -->
-                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data }"></div>
+                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), img: $root.templateFor($data), data: $data }"></div>
                 <!-- /ko -->
                 <!-- ko slimScrolledForeach: filesOnlyList -->
-                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data }"></div>
+                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), img: $root.templateFor($data), data: $data }"></div>
                 <!-- /ko -->
                 <!-- /ko -->
                 <!-- ko if: listStyle() == 'files_folders' -->
                 <!-- ko slimScrolledForeach: filesOnlyList -->
-                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data }"></div>
+                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), img: $root.templateFor($data), data: $data }"></div>
                 <!-- /ko -->
                 <!-- ko slimScrolledForeach: foldersOnlyList -->
-                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data }"></div>
+                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), img: $root.templateFor($data), data: $data }"></div>
                 <!-- /ko -->
                 <!-- /ko -->
                 <!-- ko if: listStyle() == 'mixed' -->
                 <!-- ko slimScrolledForeach: fileListHelper.paginatedItems -->
-                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data }"></div>
+                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), img: $root.templateFor($data), data: $data }"></div>
                 <!-- /ko -->
                 <!-- /ko -->
             </div>
@@ -100,7 +101,8 @@
 </div>
 
 <script type="text/html" id="filemanager_template_machinecode">
-    <div class="span6 custom title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
+    <div class="span4 title" data-bind="css: $root.files.getSuccessClass($data), text: img"></div>
+    <div class="span2 title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
     <div class="span4 uploaded" data-bind="text: formatTimeAgo(date)"></div>
     <div class="span2 size" data-bind="text: formatSize(size)"></div>
 </script>
