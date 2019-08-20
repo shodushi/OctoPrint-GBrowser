@@ -146,7 +146,7 @@ $(function() {
         };
 
         self.getEntryId = function(data) {
-            return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"].replace(".gcode", ".png"));
+            return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
         };
 
         self.checkSelectedOrigin = function(origin) {
