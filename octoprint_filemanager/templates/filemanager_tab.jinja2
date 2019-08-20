@@ -91,7 +91,7 @@
                 <!-- /ko -->
                 <!-- ko if: listStyle() == 'mixed' -->
                 <!-- ko slimScrolledForeach: fileListHelper.paginatedItems -->
-                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data }"></div>
+                <div class="span12 row-fluid" data-bind="singleOrDoubleClick: { click: $root.selectItem, dblclick: $root.dblClick }, css: { 'selected': $root.isSelected($data) }, attr: { id: $root.getEntryId($data) }, template: { name: $root.templateFor($data), data: $data, thumbnail: $root.templateFor($data) }"></div>
                 <!-- /ko -->
                 <!-- /ko -->
             </div>
@@ -100,13 +100,15 @@
 </div>
 
 <script type="text/html" id="filemanager_template_machinecode">
-    <div class="span6 title" data-bind="css: $root.files.getSuccessClass($data), text: name">aaaa<img src="" style="border: 1px solid blue; width:20px; heighth:20px;"></div>
+    <div class="span6 title" data-bind="image: thumbnail"></div>
+    <div class="span6 title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
     <div class="span4 uploaded" data-bind="text: formatTimeAgo(date)"></div>
     <div class="span2 size" data-bind="text: formatSize(size)"></div>
 </script>
 
 <script type="text/html" id="filemanager_template_model">
-    <div class="span6 title" data-bind="text: name">aaaaa<img src="" style="border: 1px solid blue; width:20px; heighth:20px;"></div>
+    <div class="span6 title" data-bind="image: thumbnail"></div>
+    <div class="span6 title" data-bind="text: name"></div>
     <div class="span4 uploaded" data-bind="text: formatTimeAgo(date)"></div>
     <div class="span2 size" data-bind="text: formatSize(size)"></div>
 </script>

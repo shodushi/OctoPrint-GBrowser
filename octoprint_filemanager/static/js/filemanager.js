@@ -145,6 +145,10 @@ $(function() {
             return "filemanager_template_" + data.type;
         };
 
+        self.thumbnaildata = function(data) {
+            alert(data.type);
+        }
+
         self.getEntryId = function(data) {
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
         };
