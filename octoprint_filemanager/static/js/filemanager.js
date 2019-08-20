@@ -23,7 +23,6 @@ $(function() {
 
         // For Rename and Create Folder dialog
         self.name = ko.observable("");
-        self.thumb = "bhbhjgghj";
 
         self.fileListHelper = new ItemListHelper(
             "filemanagerList",
@@ -148,10 +147,6 @@ $(function() {
 
         self.thumbnail = function(data) {
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
-        }
-
-        self.getVar = function(data) {
-            return self.thumb;
         }
 
         self.getEntryId = function(data) {
