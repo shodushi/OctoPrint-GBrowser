@@ -148,6 +148,9 @@ $(function() {
         self.thumbnail = function(data) {
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
         }
+        self.overlayId = function(data) {
+            return "overlay_"+data["name"].replace(" ", "");
+        }
 
         self.getEntryId = function(data) {
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
