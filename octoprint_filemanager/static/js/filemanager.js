@@ -146,7 +146,7 @@ $(function() {
         };
 
         self.thumbnaildata = function(data) {
-            return data.type.resplace(".gcode", ".png";
+            return "filemanager_entry_" + data["name"].replace(".gcode", ".png");
         }
 
         self.getEntryId = function(data) {
