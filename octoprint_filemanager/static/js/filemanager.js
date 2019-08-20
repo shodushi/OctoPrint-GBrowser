@@ -146,7 +146,7 @@ $(function() {
         };
 
         self.thumbnaildata = function(data) {
-            alert(data.type);
+            return data.type.resplace(".gcode", ".png";
         }
 
         self.getEntryId = function(data) {
