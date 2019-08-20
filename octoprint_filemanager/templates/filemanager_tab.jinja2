@@ -63,8 +63,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12 header">
-            <div class="span4">Image</div>
-            <div class="span2">{{ _('Name') }}</div>
+            <div class="span6">{{ _('Name') }}</div>
             <div class="span4">{{ _('Created') }}</div>
             <div class="span2">{{ _('Size') }}</div>
         </div>
@@ -108,8 +107,7 @@
 </script>
 
 <script type="text/html" id="filemanager_template_model">
-    <div class="span4 title" data-bind="text: thumb"></div>
-    <div class="span2 title" data-bind="text: name"></div>
+    <div class="span6 title" data-bind="text: name"></div>
     <div class="span4 uploaded" data-bind="text: formatTimeAgo(date)"></div>
     <div class="span2 size" data-bind="text: formatSize(size)"></div>
 </script>
