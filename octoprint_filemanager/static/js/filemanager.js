@@ -23,7 +23,7 @@ $(function() {
 
         // For Rename and Create Folder dialog
         self.name = ko.observable("");
-        self.thumb = ko.observable("");
+        self.thumb = "bhbhjgghj";
 
         self.fileListHelper = new ItemListHelper(
             "filemanagerList",
