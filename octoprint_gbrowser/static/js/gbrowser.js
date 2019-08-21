@@ -147,17 +147,16 @@ $(function() {
 
         self.thumbnail = function(data) {
 
-            var retval = "/plugin/gbrowser/static/img/placeholder.png"
-            var url = 'http://127.0.0:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
+            var retval = ""
+            var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
             $.get(url)
             .done(function() { 
                 retval = url;
+            }).fail(function() { 
+                retval = "/plugin/gbrowser/static/img/placeholder.png";
             })
 
-            /*.fail(function() { 
-                // not exists code
-            })
-
+            /*
             var http = new XMLHttpRequest();
             http.open('HEAD', , false)
             http.send();
@@ -433,22 +432,6 @@ $(function() {
 
             self.addFolderDialog = $("#add_folder_dialog");
         };
-
-/*
-        self.function zoomIn(event) {
-            var element = document.getElementById("overlay_d.gcode");
-            element.style.display = "inline-block";
-            var img = document.getElementById("imgZoom");
-            var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
-            var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
-            element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
-        }
-
-        self.function zoomOut() {
-            var element = document.getElementById("overlay_d.gcode");
-            element.style.display = "none";
-        }
-*/
     }
 
     OCTOPRINT_VIEWMODELS.push([
