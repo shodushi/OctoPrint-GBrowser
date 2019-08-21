@@ -124,7 +124,6 @@
 
 <script type="text/javascript">
 function zoomIn(sender, event) {
-    alert(sender.getAttribute('id'));
     var thumbid = sender.getAttribute('id');
     var id = thumbid.replace("thumb_", "overlay_");
     var element = document.getElementById(id); 
@@ -136,8 +135,10 @@ function zoomIn(sender, event) {
     element.style.backgroundPosition=(-posX*10)+"px "+(-posY*10)+"px"; 
 }
 
-function zoomOut(id) {
-  var element = document.getElementById(id);
-  element.style.display = "none";
+function zoomOut(sender) {
+    var thumbid = sender.getAttribute('id');
+    var id = thumbid.replace("thumb_", "overlay_");
+    var element = document.getElementById(id);
+    element.style.display = "none";
 }
 </script>
