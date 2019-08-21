@@ -98,7 +98,7 @@
 </div>
 
 <script type="text/html" id="filemanager_template_machinecode">
-    <div class="span6 title"><img class="thumb" data-bind="attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;" onmousemove="alert('hjkjkhkjhjkl')" onmouseout="zoomOut($root.overlayId($data))"></div>
+    <div class="span6 title"><img class="thumb" data-bind="attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;" onmousemove="zoomIn(event, 'overlay_agcode')" onmouseout="zoomOut($root.overlayId($data))"></div>
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
         <div class="uploaded" data-bind="text: formatTimeAgo(date)"></div>
