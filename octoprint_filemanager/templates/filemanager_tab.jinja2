@@ -99,7 +99,7 @@
 
 <script type="text/html" id="filemanager_template_machinecode">
     <div class="span6 title">
-        <img id="" class="thumb" onmousemove="zoomIn(event, 'overlay_agcode', 'thumb_agcode')" data-bind="attr: { src: $root.thumbnail($data), id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
+        <img id="" class="thumb" onmousemove="zoomIn(event, 'overlay_agcode', 'thumb_agcode')" onmouseout="zoomOut('overlay_agcode')" data-bind="attr: { src: $root.thumbnail($data), id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
     </div> 
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
@@ -107,7 +107,7 @@
         <div class="size" data-bind="text: formatSize(size)"></div>
     </div>
     <div class="overlay_wrapper">
-        <div id="" class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }, style: { 'backgroundImage': 'url(\'' + $root.thumbnail($data) + '\')' }" onmousemove="{ $root.zoomIn(event, $root.overlayId($data)) }"></div>
+        <div id="" class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }, style: { 'backgroundImage': 'url(\'' + $root.thumbnail($data) + '\')' }" onmousemove="zoomIn(event, 'overlay_agcode', 'thumb_agcode')"></div>
     </div>
 </script>
 
