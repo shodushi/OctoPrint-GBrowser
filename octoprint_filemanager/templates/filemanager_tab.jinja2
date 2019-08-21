@@ -134,8 +134,7 @@ function zoomIn(sender, event) {
 }
 
 function zoomOut(sender) {
-    var thumbid = sender.getAttribute('id');
-    var id = thumbid.replace("thumb_", "overlay_");
+    var id = sender.getAttribute('id').replace("thumb_", "overlay_");
     var element = document.getElementById(id);
     element.style.display = "none";
 }
