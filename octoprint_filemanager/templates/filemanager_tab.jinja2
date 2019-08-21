@@ -103,6 +103,8 @@
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
         <div class="uploaded" data-bind="text: formatTimeAgo(date)"></div>
         <div class="size" data-bind="text: formatSize(size)"></div>
+    </div>
+    <div style="position: relative">
         <div class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }" onmousemove="zoomIn(event)"></div>
     </div>
 </script>
