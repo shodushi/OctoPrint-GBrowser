@@ -152,7 +152,7 @@ $(function() {
             return "url('/downloads/files/local/"+data["name"].replace(".gcode", ".png")+"')";
         }
         self.overlayId = function(data) {
-            return "overlay_"+data["name"].replace(" ", "");
+            return "overlay_"+data["name"].replace(" ", "").replace(".", "");
         }
 
         self.getEntryId = function(data) {
