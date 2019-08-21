@@ -98,14 +98,14 @@
 </div>
 
 <script type="text/html" id="filemanager_template_machinecode">
-    <div class="span6 title"><img class="thumb" data-bind="attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;" onmousemove="zoomIn(event)" onmouseout="zoomOut()"></div>
+    <div class="span6 title"><img class="thumb" data-bind="attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;" onmousemove="{ $root.zoomIn(event, $root.overlayId($data)) }" onmouseout="{ $root.zoomOut($root.overlayId($data)) }"></div>
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
         <div class="uploaded" data-bind="text: formatTimeAgo(date)"></div>
         <div class="size" data-bind="text: formatSize(size)"></div>
     </div>
     <div class="overlay_wrapper">
-        <div id="" class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }, style: { 'backgroundImage': 'url(\'' + $root.thumbnail($data) + '\')' }" onmousemove="zoomIn(event)"></div>
+        <div id="" class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }, style: { 'backgroundImage': 'url(\'' + $root.thumbnail($data) + '\')' }" onmousemove="{ $root.zoomIn(event, $root.overlayId($data)) }"></div>
     </div>
 </script>
 

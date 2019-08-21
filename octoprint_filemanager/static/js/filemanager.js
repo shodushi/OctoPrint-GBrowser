@@ -145,12 +145,32 @@ $(function() {
             return "filemanager_template_" + data.type;
         };
 
+
+
+
         self.thumbnail = function(data) {
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
-        }
+        };
         self.overlayId = function(data) {
             return "overlay_"+data["name"].replace(" ", "").replace(".", "");
-        }
+        };
+
+
+        self.zoomIn = function(event, id) {
+            var element = document.getElementById(id);
+            element.style.display = "inline-block";
+            var img = document.getElementById("imgZoom");
+            var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
+            var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
+            element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
+        };
+
+        self. zoomOut = function(id) {
+            var element = document.getElementById(id);
+            element.style.display = "none";
+        };
+
+
 
         self.getEntryId = function(data) {
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
