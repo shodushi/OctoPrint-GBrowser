@@ -147,14 +147,18 @@ $(function() {
 
         self.thumbnail = function(data) {
 
-            var retval = ""
-            var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
-            $.get(url)
-            .done(function() { 
-                retval = url;
-            }).fail(function() { 
-                retval = "/plugin/gbrowser/static/img/placeholder.png";
-            })
+
+            var retval = function(data) {
+                var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
+                $.get(url)
+                .done(function() { 
+                    retval = url;
+                }).fail(function() { 
+                    retval = "/plugin/gbrowser/static/img/placeholder.png";
+                }) 
+                return retval;   
+            }
+            
 
             /*
             var http = new XMLHttpRequest();
