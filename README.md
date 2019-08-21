@@ -1,12 +1,10 @@
-# WARNING
+# OctoPrint-GBrowser
 
-Plugin actually not in active development!
-
-# OctoPrint-FileManager
+forked from octoprint-filemanager to support preview images for gcode files
 
 ## Setup
 
 Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
 or manually using this URL:
 
-    https://github.com/Salandora/OctoPrint-FileManager/archive/master.zip
+    https://github.com/Shodushi/yafm/archive/master.zip
