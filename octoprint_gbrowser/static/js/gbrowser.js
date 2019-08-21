@@ -145,13 +145,13 @@ $(function() {
             return "gbrowser_template_" + data.type;
         };
 
+        self.checkThumb(data) {
+
+        }
         self.thumbnail = function(data) {
 
-
-            var retval = function(data) {
-                var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
-                $.get(url)
-                .done(function() { 
+            var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
+            var retval = $.get(url).done(function() { 
                     retval = url;
                 }).fail(function() { 
                     retval = "/plugin/gbrowser/static/img/placeholder.png";
