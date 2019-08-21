@@ -155,6 +155,9 @@ $(function() {
             return "overlay_"+data["name"].replace(" ", "").replace(".", "");
         };
 
+        self.test = function() {
+            alert("hey");
+        };
 
         self.zoomIn = function(event, id) {
             var element = document.getElementById(id);
