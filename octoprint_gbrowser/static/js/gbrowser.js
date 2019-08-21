@@ -150,13 +150,11 @@ $(function() {
             var http = new XMLHttpRequest();
             http.open('HEAD', url, false);
             http.send();
+            var retval = "/plugin/gbrowser/static/img/placeholder.png"
             if(http.status!=404) {
-                return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
-            } else {
-                return "/plugin/gbrowser/static/img/placeholder.png";
+                retval = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
             }
-
-            
+            return retval;
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
