@@ -150,15 +150,16 @@ $(function() {
         }
         self.thumbnail = function(data) {
 
-            var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
-            var retval = $.get(url).done(function() { 
-                    retval = url;
+
+            let retval = function(data) {
+                var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
+                $.get(url)
+                .done(function() { 
+                    return url;
                 }).fail(function() { 
-                    retval = "/plugin/gbrowser/static/img/placeholder.png";
+                    return "/plugin/gbrowser/static/img/placeholder.png";
                 }) 
-                return retval;   
             }
-            
 
             /*
             var http = new XMLHttpRequest();
@@ -169,7 +170,7 @@ $(function() {
                 retval = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
             }
             */
-            return retval;
+            return retval(data);
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
