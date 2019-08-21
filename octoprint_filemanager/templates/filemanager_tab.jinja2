@@ -99,7 +99,7 @@
 
 <script type="text/html" id="filemanager_template_machinecode">
     <div class="span6 title">
-        <img class="thumb" data-bind="mousemove: $root.test, attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;">
+        <img id="" class="thumb" data-bind="mousemove: $root.test, attr: { src: $root.thumbnail($data) }, attr: { id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
     </div> 
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
@@ -118,4 +118,21 @@
 
 <script type="text/html" id="filemanager_template_folder">
     <div class="span12 title" data-bind=""><i class="icon-folder-open"></i><span><!-- ko text: name --><!-- /ko --><a href="#" style="float: right; padding-right: 20px;" class="hidden-desktop" data-bind="click: $root.dblClick">{{  _('Open') }}</a></span><img src="" style="border: 1px solid blue; width:20px; heigth:20px;"></div>
+</script>
+
+<script type="text/javascript">
+function zoomIn(event, id) {
+  var element = document.getElementById(id, );
+  element.style.display = "inline-block";
+  var img = document.getElementById("imgZoom");
+  var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
+  var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
+  element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
+
+}
+
+function zoomOut(id) {
+  var element = document.getElementById(id);
+  element.style.display = "none";
+}
 </script>

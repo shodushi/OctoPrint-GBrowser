@@ -151,6 +151,9 @@ $(function() {
         self.thumbnail = function(data) {
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
         };
+        self.thumbId = function(data) {
+            return "thumb_"+data["name"].replace(" ", "").replace(".", "");
+        };
         self.overlayId = function(data) {
             return "overlay_"+data["name"].replace(" ", "").replace(".", "");
         };
