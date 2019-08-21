@@ -105,7 +105,7 @@
         <div class="size" data-bind="text: formatSize(size)"></div>
     </div>
     <div class="overlay_wrapper">
-        <div id="" class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }" onmousemove="zoomIn(event)"></div>
+        <div id="" class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }, css: { 'background-image': url($root.thumbnailbackground($data)) }" onmousemove="zoomIn(event)"></div>
     </div>
 </script>
 
