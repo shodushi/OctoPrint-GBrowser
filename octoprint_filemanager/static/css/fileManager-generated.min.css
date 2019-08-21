@@ -7,13 +7,13 @@
 
 #tab_plugin_filemanager .zoomoverlay{
   border: 1px solid #d8d8d8;
-  width: 322px;
+  width: 340px;
   height: 280px;
   display: none;
   background-repeat: no-repeat;
   position: absolute;
   top: -128px;
-  left: 260px;
+  left: 242px;
   background-color: white;
 }
 
