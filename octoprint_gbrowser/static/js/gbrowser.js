@@ -145,9 +145,6 @@ $(function() {
             return "gbrowser_template_" + data.type;
         };
 
-        self.checkThumb(data) {
-
-        }
         self.thumbnail = function(data) {
 
 
