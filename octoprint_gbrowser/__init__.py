@@ -379,12 +379,12 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 
 				# version check: github repository
 				type="github_release",
-				user="Shodushi",
+				user="shodushi",
 				repo="OctoPrint-GBrowser",
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/Shodushi/OctoPrint-GBrowser/archive/{target_version}.zip"
+				pip="https://github.com/shodushi/OctoPrint-GBrowser/archive/{target_version}.zip"
 			)
 		)
 
