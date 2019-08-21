@@ -125,6 +125,7 @@
 <script type="text/javascript">
 function zoomIn(event, id, thumbid) {
     var element = document.getElementById(id);
+    alert(element);
     element.style.display = "inline-block";
     var img = document.getElementById(thumbid);
     var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
