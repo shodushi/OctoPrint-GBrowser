@@ -99,7 +99,7 @@
 
 <script type="text/html" id="filemanager_template_machinecode">
     <div class="span6 title">
-        <img id="" class="thumb" data-bind="mousemove: $root.test, attr: { src: $root.thumbnail($data) }, attr: { id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
+        <img id="" class="thumb" data-bind="mousemove: $root.test, attr: { src: $root.thumbnail($data), id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
     </div> 
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
@@ -121,10 +121,10 @@
 </script>
 
 <script type="text/javascript">
-function zoomIn(event, id) {
+function zoomIn(event, id, thumbid) {
   var element = document.getElementById(id, );
   element.style.display = "inline-block";
-  var img = document.getElementById("imgZoom");
+  var img = document.getElementById(thumbid);
   var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
   var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
   element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
