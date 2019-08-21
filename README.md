@@ -12,4 +12,11 @@ or manually using this URL:
 
 ## Screenshots
 
+# View of file listings
 ![screen1](screen1.png)
+
+
+# Zoom on mouseover
+![screen1](screen2.png)
+
+
