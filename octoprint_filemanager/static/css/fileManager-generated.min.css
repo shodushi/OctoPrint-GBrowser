@@ -6,12 +6,12 @@
 
 #tab_plugin_filemanager .overlay{
   border: 1px solid red;
-  width: 300px;
+  width: 310px;
   height: 130px;
   display: inline-block;
   /*background-image:url('http://ginger-mum.com/wp-content/uploads/2015/10/3633-1269758855-0da5042c33400a811a5d766be4579cb8.jpg');*/
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -48px;
   left: 260px;
 }
