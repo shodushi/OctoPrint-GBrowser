@@ -104,7 +104,7 @@
         <div class="uploaded" data-bind="text: formatTimeAgo(date)"></div>
         <div class="size" data-bind="text: formatSize(size)"></div>
     </div>
-    <div style="position: relative">
+    <div class="overlay_wrapper">
         <div class="zoomoverlay" data-bind="attr: { id: $root.overlayId($data) }" onmousemove="zoomIn(event)"></div>
     </div>
 </script>
