@@ -145,10 +145,10 @@ $(function() {
             return "gbrowser_template_" + data.type;
         };
 
-        self.thumbnail = function(data) {
+        self.thumbnail = function(data, base_url) {
 
             var http = new XMLHttpRequest();
-            http.open('HEAD', 'http://127.0.0:5000/downloads/files/local/"+data["name"].replace(".gcode", ".png"', false)
+            http.open('HEAD', 'http://127.0.0:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png"), false)
             http.send();
             var retval = "/plugin/gbrowser/static/img/placeholder.png"
             if(http.status!=404) {
