@@ -2,6 +2,10 @@
 
 forked from octoprint-filemanager (https://github.com/Salandora/OctoPrint-FileManager) to support preview images for gcode files
 
+
+## still under development
+
+
 ## Setup
 
 Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
