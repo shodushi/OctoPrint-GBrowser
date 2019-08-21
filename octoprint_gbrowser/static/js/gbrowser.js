@@ -152,21 +152,12 @@ $(function() {
                 var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
                 $.get(url)
                 .done(function() { 
-                    return url;
+                    return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
                 }).fail(function() { 
                     return "/plugin/gbrowser/static/img/placeholder.png";
                 }) 
             }
 
-            /*
-            var http = new XMLHttpRequest();
-            http.open('HEAD', , false)
-            http.send();
-            
-            if(http.status!=404) {
-                retval = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
-            }
-            */
             return retval(data);
         };
         self.thumbId = function(data) {
