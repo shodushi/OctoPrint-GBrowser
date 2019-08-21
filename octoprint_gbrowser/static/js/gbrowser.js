@@ -145,15 +145,27 @@ $(function() {
             return "gbrowser_template_" + data.type;
         };
 
-        self.thumbnail = function(data, base_url) {
+        self.thumbnail = function(data) {
+
+            var retval = "/plugin/gbrowser/static/img/placeholder.png"
+            var url = 'http://127.0.0:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
+            $.get(url)
+            .done(function() { 
+                retval = url;
+            })
+
+            /*.fail(function() { 
+                // not exists code
+            })
 
             var http = new XMLHttpRequest();
-            http.open('HEAD', 'http://127.0.0:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png"), false)
+            http.open('HEAD', , false)
             http.send();
-            var retval = "/plugin/gbrowser/static/img/placeholder.png"
+            
             if(http.status!=404) {
                 retval = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
             }
+            */
             return retval;
         };
         self.thumbId = function(data) {
