@@ -398,7 +398,7 @@ def __plugin_load__():
 		__plugin_implementation__ = None
 		return
 
-	__plugin_implementation__ = FilemanagerPlugin()
+	__plugin_implementation__ = gbrowserPlugin()
 
 	global __plugin_hooks__
 	__plugin_hooks__ = {
