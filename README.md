@@ -8,3 +8,8 @@ Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wik
 or manually using this URL:
 
     https://github.com/Shodushi/yafm/archive/master.zip
+
+
+## Screenshots
+
+![screen1](screen1.png)
