@@ -27,7 +27,7 @@ plugin_author = "Stefan Kunter (Shodushi)"
 plugin_author_email = "stefan.kunter@gmx.de"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/Shodushi/OctoPrint-GBrowser"
+plugin_url = "https://github.com/Shodushi/yafm"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
