@@ -2,7 +2,7 @@
 
 
 #tab_plugin_filemanager .item_detail {
-	
+	position: relative;
 }
 
 #tab_plugin_filemanager .zoomoverlay{
