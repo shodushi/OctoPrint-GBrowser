@@ -123,10 +123,11 @@
 
 
 <script type="text/javascript">
-function zoomIn(sender, event, id, thumbid) {
-    alert(sender);
+function zoomIn(sender, event) {
+    alert(sender.getAttribute('id'));
+    var thumbid = sender.getAttribute('id');
+    var id = thumbid.replace("thumb_", "overlay_");
     var element = document.getElementById(id); 
-
     element.style.display = "inline-block";
     var img = document.getElementById(thumbid);
     var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
