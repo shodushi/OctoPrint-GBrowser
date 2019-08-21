@@ -165,7 +165,7 @@ $(function() {
             element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
         };
 
-        self. zoomOut = function(id) {
+        self.zoomOut = function(id) {
             var element = document.getElementById(id);
             element.style.display = "none";
         };
