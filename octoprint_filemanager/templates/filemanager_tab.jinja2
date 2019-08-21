@@ -124,13 +124,7 @@
 
 <script type="text/javascript">
 function zoomIn(event, id, thumbid) {
-  var element = document.getElementById(id);
-  element.style.display = "inline-block";
-  var img = document.getElementById(thumbid);
-  var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
-  var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
-  element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
-
+    alert("vcccc");
 }
 
 function zoomOut(id) {
