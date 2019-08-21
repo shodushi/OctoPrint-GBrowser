@@ -99,7 +99,7 @@
 
 <script type="text/html" id="filemanager_template_machinecode">
     <div class="span6 title">
-        <img id="" class="thumb" onmousemove="zoomIn(event, { $root.overlayId($data) }, { $root.thumbId($data) })" onmouseout="zoomOut('overlay_agcode')" data-bind="attr: { src: $root.thumbnail($data), id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
+        <img id="" class="thumb" onmousemove="zoomIn(this, event, 'overlay_agcode', 'thumb_agcode')" onmouseout="zoomOut('overlay_agcode')" data-bind="attr: { src: $root.thumbnail($data), id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
     </div> 
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
@@ -123,7 +123,8 @@
 
 
 <script type="text/javascript">
-function zoomIn(event, id, thumbid) {
+function zoomIn(sender, event, id, thumbid) {
+    alert(sender);
     var element = document.getElementById(id); 
 
     element.style.display = "inline-block";
