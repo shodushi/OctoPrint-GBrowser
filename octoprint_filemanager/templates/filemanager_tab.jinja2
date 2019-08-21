@@ -102,7 +102,7 @@
         <img id="" class="thumb" onmousemove="zoomIn(this, event)" onmouseout="zoomOut(this)" data-bind="attr: { src: $root.thumbnail($data), id: $root.thumbId($data) }" style="border: none; width: 200px; height: 120px;">
     </div> 
     <div class="item_detail">
-        <div class="title" style="font-weight:700" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
+        <div class="title" style="font-weight: 700" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
         <div class="uploaded" data-bind="text: formatTimeAgo(date)"></div> 
         <div class="size" data-bind="text: formatSize(size)"></div>
     </div>
@@ -119,8 +119,6 @@
 <script type="text/html" id="filemanager_template_folder">
     <div class="span12 title" data-bind=""><i class="icon-folder-open"></i><span><!-- ko text: name --><!-- /ko --><a href="#" style="float: right; padding-right: 20px;" class="hidden-desktop" data-bind="click: $root.dblClick">{{  _('Open') }}</a></span><img src="" style="border: 1px solid blue; width:20px; heigth:20px;"></div>
 </script>
-
-
 
 <script type="text/javascript">
 function zoomIn(sender, event) {
