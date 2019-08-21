@@ -125,9 +125,10 @@
 <script type="text/javascript">
 function zoomIn(event, id, thumbid) {
     var element = document.getElementById(id);
-    alert(element);
+
     element.style.display = "inline-block";
     var img = document.getElementById(thumbid);
+    alert(img);
     var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
     var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
     element.style.backgroundPosition=(-posX*2)+"px "+(-posY*4)+"px";
