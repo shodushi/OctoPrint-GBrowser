@@ -147,7 +147,7 @@ $(function() {
 
         self.thumbnail = function(data) {
 
-
+/*
             let retval = function(data) {
                 var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
                 $.get(url)
@@ -159,6 +159,8 @@ $(function() {
             }
 
             return retval(data);
+*/
+            return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
