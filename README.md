@@ -7,7 +7,7 @@ forked from octoprint-filemanager (https://github.com/Salandora/OctoPrint-FileMa
 Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
 or manually using this URL:
 
-    https://github.com/Shodushi/yafm/archive/master.zip
+    https://github.com/shodushi/OctoPrint-GBrowser/archive/master.zip
 
 
 ## More info:
