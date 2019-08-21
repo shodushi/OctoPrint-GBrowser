@@ -1,7 +1,6 @@
 ko.bindingHandlers.mousemoves = {
-    init: function(id, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+    init: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
         var value = ko.utils.unwrapObservable(valueAccessor());
-
         $(id).mousemove(function( event ) {
             var msg = "Handler for .mousemove() called at ";
             msg += event.pageX + ", " + event.pageY;
