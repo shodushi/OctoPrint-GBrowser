@@ -145,9 +145,6 @@ $(function() {
             return "filemanager_template_" + data.type;
         };
 
-
-
-
         self.thumbnail = function(data) {
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
         };
@@ -156,10 +153,6 @@ $(function() {
         };
         self.overlayId = function(data) {
             return "overlay_"+data["name"].replace(" ", "").replace(".", "");
-        };
-
-        self.test = function() {
-            alert("hey");
         };
 
         self.zoomIn = function(event, id) {
@@ -175,8 +168,6 @@ $(function() {
             var element = document.getElementById(id);
             element.style.display = "none";
         };
-
-
 
         self.getEntryId = function(data) {
             return "filemanager_entry_" + md5(data["origin"] + ":" + data["name"]);
