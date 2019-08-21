@@ -147,13 +147,11 @@ $(function() {
 
         self.thumbnail = function(data) {
 
-            var http = new XMLHttpRequest();
-            http.open('HEAD', url, false);
-            http.send();
+            
             var retval = "/plugin/gbrowser/static/img/placeholder.png"
-            if(http.status!=404) {
-                retval = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
-            }
+            //if(http.status!=404) {
+            //    retval = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
+            //}
             return retval;
         };
         self.thumbId = function(data) {
