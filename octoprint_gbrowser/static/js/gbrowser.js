@@ -146,7 +146,17 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-            return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
+
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            if(http.status!=404) {
+                return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");    
+            } else {
+                return "/plugin/gbrowser/static/img/placeholder.png";
+            }
+
+            
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
