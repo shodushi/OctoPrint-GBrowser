@@ -131,7 +131,7 @@ function zoomIn(event, id, thumbid) {
     var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
     var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
     console.log(posX);
-    element.style.backgroundPosition=(-posX*8)+"px "+(-posY*8)+"px";
+    element.style.backgroundPosition=(-posX*8)+"px "+(-posY*8)+"px"; 
 }
 
 function zoomOut(id) {
