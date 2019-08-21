@@ -6,10 +6,10 @@
 }
 
 #tab_plugin_filemanager .zoomoverlay{
-  border: 1px solid red;
+  border: 1px solid #d8d8d8;
   width: 322px;
   height: 134px;
-  display: inline-block;
+  display: none;
   background-repeat: no-repeat;
   position: absolute;
   top: -128px;
