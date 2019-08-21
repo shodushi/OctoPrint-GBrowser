@@ -94,12 +94,12 @@
                 <!-- /ko -->
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 
 <script type="text/html" id="filemanager_template_machinecode">
     <div class="span6 title">
-        <img class="thumb" data-bind="attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;">
+        <img class="thumb" data-bind="mousemoves: { $root.overlayId($data) }, attr: { src: $root.thumbnail($data) }" style="border: none; width: 200px; height: 120px;">
     </div>
     <div class="item_detail">
         <div class="title" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
