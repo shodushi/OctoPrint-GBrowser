@@ -81,7 +81,7 @@ class FilemanagerPlugin(octoprint.plugin.TemplatePlugin,
 
 	def get_assets(self):
 		return dict(
-			js=["js/jquery.fileDownload.js", "js/ko.single_double_click.js", "js/ko.mousemoves.js", "js/filemanager.js"],
+			js=["js/jquery.fileDownload.js", "js/ko.single_double_click.js", "js/filemanager.js"],
 			css=["css/fileManager-generated.min.css"],
 			less=["less/fileManager.less"]
 		)
