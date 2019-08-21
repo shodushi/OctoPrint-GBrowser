@@ -3,6 +3,7 @@
 #tab_plugin_filemanager .item_detail {
 	position: relative;
 }
+
 #tab_plugin_filemanager .overlay{
   border: 1px solid blue;
   width: 300px;
