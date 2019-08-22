@@ -172,7 +172,7 @@ $(function() {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
         };
         self.overlayId = function(data) {
-            return "overlay_"+data["name"].replace(" ", "").replace(".", "");
+            return "overlay_"+data["name"].replace(" ", "").replace(".", ""); 
         };
 
         self.zoomIn = function(event, id) {
