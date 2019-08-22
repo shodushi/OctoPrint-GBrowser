@@ -174,7 +174,7 @@ $(function() {
         };
 
         self.showPath = function() {
-            return self.currentPath().replace("/", " &gt; "),
+            return self.currentPath().replace("/", " &gt; ");
         };
 
         self.zoomIn = function(event, id) {
