@@ -146,7 +146,7 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-            console.log(self.currentPath);
+            alert(self.currentPath);
 
 /*
             let retval = function(data) {
