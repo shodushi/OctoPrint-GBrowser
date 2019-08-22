@@ -167,7 +167,7 @@ $(function() {
         };
         self.thumbId = function(data) {
             return "thumb_"+data.replace(" ", "").replace(".", "");
-        };
+        }; 
         self.overlayId = function(data) {
             return "overlay_"+data.replace(" ", "").replace(".", ""); 
         };
