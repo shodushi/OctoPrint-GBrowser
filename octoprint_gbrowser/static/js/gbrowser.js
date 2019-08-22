@@ -146,24 +146,24 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-/*
+            var path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
+            if(self.currentPath() != "") {
+                path = "/downloads/files/local/"+self.currentPath()+"/"+data["name"].replace(".gcode", ".png");
+            }
+
             let retval = function(data) {
-                var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
+                var url = 'http://127.0.0.1:5000'+path;
                 $.get(url)
                 .done(function() { 
-                    return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
+                    return path;
                 }).fail(function() { 
                     return "/plugin/gbrowser/static/img/placeholder.png";
                 }) 
             }
             return retval(data);
-*/
+
             //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
-            var path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
-            if(self.currentPath() != "") {
-                path = "/downloads/files/local/"+self.currentPath()+"/"+data["name"].replace(".gcode", ".png");
-            }
-            return path;
+            //return path;
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
@@ -173,7 +173,7 @@ $(function() {
         };
 
         self.showPath = function() {
-            return self.currentPath().replace("/", " » "); 
+            return self.currentPath().replace("/", " &gt; "); 
         };
 
         self.zoomIn = function(event, id) {
