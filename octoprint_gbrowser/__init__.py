@@ -4,6 +4,7 @@ from __future__ import absolute_import
 import threading
 
 from flask import request, jsonify, make_response, url_for
+import flask
 import flask_resize
 from contextlib import contextmanager
 
@@ -65,6 +66,8 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 						octoprint.plugin.ShutdownPlugin,
 						octoprint.plugin.SettingsPlugin):
 
+	resize = flask_resize.Resize()
+	
 	def initialize(self):
 		self._worker_lock_mutex = threading.RLock()
 		self._worker_locks = dict()
