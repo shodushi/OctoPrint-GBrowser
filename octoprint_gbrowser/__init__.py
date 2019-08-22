@@ -4,10 +4,7 @@ from __future__ import absolute_import
 import threading
 
 from flask import request, jsonify, make_response, url_for
-import flask
-import flask_resize
 from contextlib import contextmanager
-import jinja2
 from octoprint.settings import valid_boolean_trues
 from octoprint.filemanager.destinations import FileDestinations
 from octoprint.server.util.flask import restricted_access, get_json_command_from_request
@@ -15,14 +12,6 @@ from octoprint.server.util.flask import restricted_access, get_json_command_from
 import octoprint.plugin
 import pkg_resources
 from .ThreadPool import ThreadPool
-
-
-app = flask.Flask(__name__)
-app.config['RESIZE_URL'] = 'http://127.0.0.1:5000/'
-app.config['RESIZE_ROOT'] = '/tmp'
-resize = flask_resize.Resize(app)
- 
-jinja2.filters.FILTERS['resize'] = resize
 
 # copied from pluginmanager plugin
 def _is_octoprint_compatible(compatibility_entries):
