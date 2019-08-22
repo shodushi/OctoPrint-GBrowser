@@ -99,7 +99,7 @@
 
 <script type="text/html" id="gbrowser_template_machinecode">
     <div class="span6 title">
-        <img id="" class="thumb" onmousemove="zoomIn(this, event)" onmouseout="zoomOut(this)" data-bind="attr: { id: $root.thumbId(name) }" style="border: none; width: 200px; height: 120px;" src="{{ thumbnail(name)|resize('300x300', format='png', placeholder=true) }}">
+        <img id="" class="thumb" onmousemove="zoomIn(this, event)" onmouseout="zoomOut(this)" data-bind="attr: { id: $root.thumbId(name) }" style="border: none; width: 200px; height: 120px;" src="{{ '/downloads/files/local/d.gcode'|resize('300x300', format='png', placeholder=true) }}">
     </div>  
     <div class="item_detail">
         <div class="title" style="font-weight: 700" data-bind="css: $root.files.getSuccessClass($data), text: name"></div>
