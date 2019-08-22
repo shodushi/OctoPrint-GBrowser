@@ -161,7 +161,7 @@ $(function() {
 */
             //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
             var path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
-            if self.currentPath() == "" {
+            if(self.currentPath() == "") {
                 path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
             } else {
                 path = "/downloads/files/local/"+self.currentPath()+"/"+data["name"].replace(".gcode", ".png");
