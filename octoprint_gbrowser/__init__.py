@@ -21,7 +21,7 @@ app = flask.Flask(__name__)
 app.config['RESIZE_URL'] = 'http://127.0.0.1:5000/'
 app.config['RESIZE_ROOT'] = '/tmp'
 resize = flask_resize.Resize(app)
-
+ 
 jinja2.filters.FILTERS['resize'] = resize
 
 # copied from pluginmanager plugin
