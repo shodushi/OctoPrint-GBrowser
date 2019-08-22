@@ -160,7 +160,13 @@ $(function() {
             return retval(data);
 */
             //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
-            return "/downloads/files/local/"+data["name"].replace(".gcode", ".png")+self.currentPath();
+            var path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
+            if self.currentPath() == "" {
+                path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
+            } else {
+                path = "/downloads/files/local/"+self.currentPath()+"/"+data["name"].replace(".gcode", ".png");
+            }
+            return path;
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
