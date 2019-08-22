@@ -156,7 +156,6 @@ $(function() {
                     return "/plugin/gbrowser/static/img/placeholder.png";
                 }) 
             }
-
             return retval(data);
 */
             //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
