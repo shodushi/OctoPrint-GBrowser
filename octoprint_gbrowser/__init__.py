@@ -4,6 +4,7 @@ from __future__ import absolute_import
 import threading
 
 from flask import request, jsonify, make_response, url_for
+import flask_resize
 from contextlib import contextmanager
 
 from octoprint.settings import valid_boolean_trues
