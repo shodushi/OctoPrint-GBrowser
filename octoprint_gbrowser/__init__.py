@@ -18,7 +18,7 @@ from .ThreadPool import ThreadPool
 
 config = flask_resize.configuration.Config(
     url='http://127.0.0.1:5000/',
-    root='/downloads/files/local/',
+    root='/tmp/',
 )
 resize = flask_resize.make_resizer(config)
 
