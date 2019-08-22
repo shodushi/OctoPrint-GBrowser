@@ -5,7 +5,6 @@ import threading
 
 from flask import request, jsonify, make_response, url_for
 import flask
-import flask_resize
 from contextlib import contextmanager
 
 from octoprint.settings import valid_boolean_trues
