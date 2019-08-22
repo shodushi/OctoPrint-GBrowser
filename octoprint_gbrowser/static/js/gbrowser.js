@@ -146,9 +146,9 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-            var path = "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
+            var path = "/downloads/files/local/"+.replace(".gcode", ".png");
             if(self.currentPath() != "") {
-                path = "/downloads/files/local/"+self.currentPath()+"/"+data["name"].replace(".gcode", ".png");
+                path = "/downloads/files/local/"+self.currentPath()+"/"+data[.replace(".gcode", ".png");
             }
 
             let retval = function(data) {
@@ -166,10 +166,10 @@ $(function() {
             //return path;
         };
         self.thumbId = function(data) {
-            return "thumb_"+data["name"].replace(" ", "").replace(".", "");
+            return "thumb_"+data.replace(" ", "").replace(".", "");
         };
         self.overlayId = function(data) {
-            return "overlay_"+data["name"].replace(" ", "").replace(".", ""); 
+            return "overlay_"+data.replace(" ", "").replace(".", ""); 
         };
 
         self.showPath = function() {
