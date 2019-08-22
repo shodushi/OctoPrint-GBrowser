@@ -12,17 +12,16 @@ from octoprint.settings import valid_boolean_trues
 from octoprint.filemanager.destinations import FileDestinations
 from octoprint.server.util.flask import restricted_access, get_json_command_from_request
 
-import jinja2
-
 import octoprint.plugin
 import pkg_resources
 from .ThreadPool import 
 
-config = flask_resize.configuration.Config(
-    url='http://127.0.0.1:5000/',
-    root='/tmp/',
-)
-resize = flask_resize.make_resizer(config)
+
+app = flask.Flask(__name__)
+app.config['RESIZE_URL'] = 'http://127.0.0.1:5000/'
+app.config['RESIZE_ROOT'] = '/tmp'
+resize = flask_resize.Resize(app)
+
 jinja2.filters.FILTERS['resize'] = resize
 
 # copied from pluginmanager plugin
