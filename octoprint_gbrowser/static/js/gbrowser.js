@@ -148,7 +148,7 @@ $(function() {
         self.thumbnail = function(data) {
             var path = "/downloads/files/local/"+data.replace(".gcode", ".png");
             if(self.currentPath() != "") {
-                path = "/downloads/files/local/"+self.currentPath()+"/"+data[.replace(".gcode", ".png");
+                path = "/downloads/files/local/"+self.currentPath()+"/"+data.replace(".gcode", ".png");
             }
 
             let retval = function(data) {
