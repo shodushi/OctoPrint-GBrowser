@@ -12,10 +12,11 @@ from octoprint.settings import valid_boolean_trues
 from octoprint.filemanager.destinations import FileDestinations
 from octoprint.server.util.flask import restricted_access, get_json_command_from_request
 
+import jinja2
+
 import octoprint.plugin
 import pkg_resources
 from .ThreadPool import 
-import jinja2
 
 config = flask_resize.configuration.Config(
     url='http://127.0.0.1:5000/',
