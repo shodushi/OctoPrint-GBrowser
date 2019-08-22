@@ -146,8 +146,6 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-            alert(self.currentPath);
-
 /*
             let retval = function(data) {
                 var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
@@ -159,10 +157,10 @@ $(function() {
                 }) 
             }
 
-            return retval(data); 
+            return retval(data);
 */
             //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
-            return "/downloads/files/local/"+data["name"].replace(".gcode", ".png")+self.currentPath;
+            return "/downloads/files/local/"+data["name"].replace(".gcode", ".png")+self.currentPath();
         };
         self.thumbId = function(data) {
             return "thumb_"+data["name"].replace(" ", "").replace(".", "");
