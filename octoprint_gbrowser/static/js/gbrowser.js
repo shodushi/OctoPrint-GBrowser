@@ -159,7 +159,7 @@ $(function() {
                 }) 
             }
 
-            return retval(data);
+            return retval(data); 
 */
             //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png")+self.currentPath;
