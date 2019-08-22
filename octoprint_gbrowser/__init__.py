@@ -7,7 +7,7 @@ from flask import request, jsonify, make_response, url_for
 import flask
 import flask_resize
 from contextlib import contextmanager
-
+import jinja2
 from octoprint.settings import valid_boolean_trues
 from octoprint.filemanager.destinations import FileDestinations
 from octoprint.server.util.flask import restricted_access, get_json_command_from_request
