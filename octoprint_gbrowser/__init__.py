@@ -16,6 +16,11 @@ import octoprint.plugin
 import pkg_resources
 from .ThreadPool import ThreadPool
 
+config = flask_resize.configuration.Config(
+    url='http://127.0.0.1:5000/',
+    root='/downloads/files/local/',
+)
+resize = flask_resize.make_resizer(config)
 
 # copied from pluginmanager plugin
 def _is_octoprint_compatible(compatibility_entries):
@@ -77,13 +82,6 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 		self.workerPool = ThreadPool(5)
 		self.workerBusy = 5 * [False]
 		self.workerProgress = 5 * [dict(command="", progress=0, lastfile="")]
-
-		app = flask.Flask(__name__)
-		app.config['RESIZE_URL'] = 'http://127.0.0.1:5000/'
-		app.config['RESIZE_ROOT'] = '/downloads/files/local/'
-		resize = flask_resize.Resize()
-		self.resize = flask_resize.Resize()
-		
 
 	def on_shutdown(self):
 		if any(self.workerBusy):
