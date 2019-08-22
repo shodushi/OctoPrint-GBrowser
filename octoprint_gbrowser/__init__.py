@@ -14,13 +14,15 @@ from octoprint.server.util.flask import restricted_access, get_json_command_from
 
 import octoprint.plugin
 import pkg_resources
-from .ThreadPool import ThreadPool
+from .ThreadPool import 
+import jinja2
 
 config = flask_resize.configuration.Config(
     url='http://127.0.0.1:5000/',
     root='/tmp/',
 )
 resize = flask_resize.make_resizer(config)
+jinja2.filters.FILTERS['resize'] = resize
 
 # copied from pluginmanager plugin
 def _is_octoprint_compatible(compatibility_entries):
