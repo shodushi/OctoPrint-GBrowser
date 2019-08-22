@@ -147,6 +147,7 @@ $(function() {
 
         self.thumbnail = function(data) {
             console.log(self.currentPath);
+
 /*
             let retval = function(data) {
                 var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
