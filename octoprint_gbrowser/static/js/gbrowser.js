@@ -173,6 +173,10 @@ $(function() {
             return "overlay_"+data["name"].replace(" ", "").replace(".", ""); 
         };
 
+        self.showPath = function() {
+            return self.currentPath().replace("/", " &gt; "),
+        };
+
         self.zoomIn = function(event, id) {
             var element = document.getElementById(id);
             element.style.display = "inline-block";
