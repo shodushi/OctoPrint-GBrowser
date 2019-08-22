@@ -66,7 +66,6 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 						octoprint.plugin.ShutdownPlugin,
 						octoprint.plugin.SettingsPlugin):
 
-	resize = flask_resize.Resize()
 
 	def initialize(self):
 		self._worker_lock_mutex = threading.RLock()
@@ -78,6 +77,9 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 		self.workerPool = ThreadPool(5)
 		self.workerBusy = 5 * [False]
 		self.workerProgress = 5 * [dict(command="", progress=0, lastfile="")]
+
+		resize = flask_resize.Resize()
+		self.resize = flask_resize.Resize()
 
 	def on_shutdown(self):
 		if any(self.workerBusy):
