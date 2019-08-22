@@ -146,7 +146,7 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-            var path = "/downloads/files/local/"+.replace(".gcode", ".png");
+            var path = "/downloads/files/local/"+data.replace(".gcode", ".png");
             if(self.currentPath() != "") {
                 path = "/downloads/files/local/"+self.currentPath()+"/"+data[.replace(".gcode", ".png");
             }
