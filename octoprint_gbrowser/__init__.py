@@ -83,6 +83,7 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 		app.config['RESIZE_ROOT'] = '/downloads/files/local/'
 		resize = flask_resize.Resize()
 		self.resize = flask_resize.Resize()
+		
 
 	def on_shutdown(self):
 		if any(self.workerBusy):
