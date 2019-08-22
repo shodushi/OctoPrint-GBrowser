@@ -81,7 +81,7 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 
 		self.workerPool = ThreadPool(5)
 		self.workerBusy = 5 * [False]
-		self.workerProgress = 5 * [dict(command="", progress=0, lastfile="")]
+		self.workerProgress = 5 * [dict(command="", progress=0, lastfile="")] 
 
 	def on_shutdown(self):
 		if any(self.workerBusy):
