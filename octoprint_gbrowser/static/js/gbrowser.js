@@ -146,7 +146,7 @@ $(function() {
         };
 
         self.thumbnail = function(data) {
-
+            console.log(self.currentPath);
 /*
             let retval = function(data) {
                 var url = 'http://127.0.0.1:5000/downloads/files/local/'+data["name"].replace(".gcode", ".png")
@@ -160,6 +160,7 @@ $(function() {
 
             return retval(data);
 */
+            //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
             return "/downloads/files/local/"+data["name"].replace(".gcode", ".png");
         };
         self.thumbId = function(data) {
