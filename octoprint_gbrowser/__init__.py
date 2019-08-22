@@ -29,7 +29,7 @@ def _is_octoprint_compatible(compatibility_entries):
 			octo_compat = ">={}".format(octo_compat)
 
 		s = next(pkg_resources.parse_requirements("OctoPrint" + octo_compat))
-		if octoprint_version in s:
+		if octoprint_version in s: 
 			break
 	else:
 		return False
@@ -67,7 +67,7 @@ class gbrowserPlugin(octoprint.plugin.TemplatePlugin,
 						octoprint.plugin.SettingsPlugin):
 
 	resize = flask_resize.Resize()
-	
+
 	def initialize(self):
 		self._worker_lock_mutex = threading.RLock()
 		self._worker_locks = dict()
