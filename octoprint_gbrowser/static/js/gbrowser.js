@@ -150,20 +150,6 @@ $(function() {
             if(self.currentPath() != "") {
                 path = "/downloads/files/local/"+self.currentPath()+"/"+data.replace(".gcode", ".png");
             }
-
-            /*let retval = function(data) {
-                var url = 'http://127.0.0.1:5000'+path;
-                $.get(url)
-                .done(function() { 
-                    return path;
-                }).fail(function() { 
-                    return "/plugin/gbrowser/static/img/placeholder.png";
-                }) 
-            }
-            alert(retval(data));
-            return retval(data);
-            */
-            //return "/downloads/files/local/"+self.currentPath+"/"+data["name"].replace(".gcode", ".png");
             return path;
         };
         self.thumbId = function(data) {
