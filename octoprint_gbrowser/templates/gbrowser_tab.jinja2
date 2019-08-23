@@ -130,7 +130,7 @@ function zoomIn(sender, event) {
     var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
     var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
     console.log(posX);
-    element.style.backgroundPosition=(-posX*4)+"px "+(-posY*4)+"px"; 
+    element.style.backgroundPosition=(-posX*3)+"px "+(-posY*3)+"px"; 
 }
 
 function zoomOut(sender) {
